@@ -1,14 +1,7 @@
 node default {
-  include apache
 
-  class {'ntp':
-    enable => false;
-  }
-
-  apache::vhost {'personal_site':
-    port    => 80,
-    docroot => '/var/www/personal',
-    options => 'Indexes MultiViews',
-  }
+  class { "ntp":
+      servers    => [ '0.us.pool.ntp.org iburst','1.us.pool.ntp.org iburst','2.us.pool.ntp.org iburst','3.us.pool.ntp.org iburst'],
+    }
+  
 }
-

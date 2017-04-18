@@ -12,5 +12,6 @@ copy etc /etc
 
 RUN sed -i 's/puppet settings./puppet settings.\n\[main\]\n    dns_alt_names = puppet,puppet.docker,puppet.docker.usc.edu/' etc/puppetlabs/puppet/puppet.conf
 RUN /opt/puppetlabs/puppet/bin/puppet module install puppetlabs/docker_platform
+RUN /opt/puppetlabs/puppet/bin/puppet module install puppetlabs-ntp
 
 CMD ["/opt/puppetlabs/bin/puppetserver", "foreground"]
