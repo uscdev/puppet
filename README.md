@@ -8,7 +8,7 @@ yum -y update && yum -y upgrade
 rpm -Uvh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 yum install puppet-agent
 
-/opt/puppetlabs/bin/puppet agent --tags docker-manager,docker-node --server puppet.docker.usc.edu
+/opt/puppetlabs/bin/puppet agent --test --server puppet.docker.usc.edu --waitforcert 3
 ````
 Note: Server can be specified in the /etc/puppetlabs/puppet/puppet.conf files:
 [main]
