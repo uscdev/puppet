@@ -6,6 +6,8 @@ services:
       - 8140:8140
     networks:
       web-bus:
+#   volumes:
+#     - /etc/puppetlabs/puppet/ssl
     deploy:
       replicas: 1
       update_config:

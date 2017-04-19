@@ -1,4 +1,4 @@
-node docker-node {
+node 'dcorley-swarm-node01','dcorley-swarm-node02','dcorley-swarm-node03' {
 
   class {'docker':
     socket_bind  => 'unix:///var/run/docker.sock',
