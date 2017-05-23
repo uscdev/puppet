@@ -11,8 +11,10 @@ yum install puppet-agent
 /opt/puppetlabs/bin/puppet agent --test --server puppet.docker.usc.edu --waitforcert 3
 ````
 Note: Server can be specified in the /etc/puppetlabs/puppet/puppet.conf files:
+````
 [main]
 server=puppet.docker.usc.edu
+````
 
 Then, sign on to the puppet server and accept the certificates:
 ````
